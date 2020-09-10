@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Introduzir Novas informações em uma tabela com JavaScript</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>Genero</td>
+                </tr>
+            </thead>
+            <tbody id="table-corpo">
+                <tr>
+                    <td>1</td>
+                    <td>Raul Esteves Antunes</td>
+                    <td>27</td>
+                    <td>Masculino</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aida Antonio Capata</td>
+                    <td>30</td>
+                    <td>Femenido</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Nelson Do Carmo Ventura</td>
+                    <td>25</td>
+                    <td>Masculino</td>
+                </tr>
+
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        <br>
+        <button onclick="novosDadosforTable()">Mostrar novos ados</button><br>
+    </center>
+    <!-- <iframe src="https://www.w3schools.com/php/php_compiler.asp" width="100%" height="450" style="border:1px solid black;"></iframe> -->
+
+    <script>
+        var info = "";
+
+        function novosDadosforTable() {
+            info += "<tr>";
+
+            info += "<td>1</td>";
+            info += "<td>Ana Vivalda Esteves Antunes</td>";
+            info += "<td>32</td>";
+            info += "<td>Femenino</td>";
+            info += "</tr>"
+
+            info += "<tr>";
+
+            info += "<td>2</td>";
+            info += "<td>Estela Berta Esteves Antunes</td>";
+            info += "<td>32</td>";
+            info += "<td>Femenino</td>";
+            info += "</tr>"
+
+            info += "<tr>";
+            info += "<td>3</td>";
+            info += "<td> Biuga Esteves Antunes</td>";
+            info += "<td>32</td>";
+            info += "<td>Femenino</td>";
+
+            info += "</tr>"
+            document.getElementById('table-corpo').innerHTML = info;
+
+        }
+    </script>
+</body>
+
+</html>
